@@ -1,0 +1,121 @@
+#include<stdlib.h>
+#include<stdio.h>
+#define max_size 5
+
+int queue[max_size];
+int front = -1;
+int rear = -1;
+
+void enqueue();
+void dequeue();
+void display();
+void peek()
+{
+  printf("\n\t Peek : %d",queue[front]);
+}
+void isfull()
+{
+  if(rear == max_size-1)
+  {
+    printf("\n\t Queue is full");
+  }
+  else
+  {
+    printf("\n\t Queue is not full");
+  }
+}
+void isempty()
+{
+  if(front == -1 && rear == -1)
+  {
+    printf("\n\t Queue is empty");
+  }
+  else
+  {
+    printf("\n\t Queue is not empty");
+  }
+}
+void main()
+{
+  int ch;
+  while(2)
+  {
+    printf("\n ------------------------------------ Queue using Array ------------------------------------");
+    printf("\n1.Display\t2.Enqueue\t3.Dequeue\t4.peek\t5.Isfull\t6.Isempty\t7.Exit");
+    printf("\n\t Enter Your choice:");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+      case 1:display();break;
+      case 2:enqueue();break;
+      case 3:dequeue();break;
+      case 4:peek();break;
+      case 5:isfull();break;
+      case 6:isempty();break;
+      case 7:exit(0);
+      default:
+              printf("\n\t Enter correct choice (1-4)");
+    }
+  }
+}
+
+void enqueue()
+{
+  int data;
+  printf("\n\t Enter data to enqueue: ");
+  scanf("%d",&data);
+  if(front == 0 && rear==max_size - 1)
+  {
+    printf("\n Queue is already full... Overflow");
+  }
+  else if(front == -1 && rear == -1)
+  {
+    front = front + 1;
+    rear = rear + 1;
+    queue[rear] = data;
+    printf("\n\t %d data is enqueded at %d",data,rear);
+  }
+  else if(rear < max_size-1)
+  {
+    rear = rear + 1;
+    queue[rear] = data;
+    printf("\n\t %d data is enqueued at %d",data,rear);
+  }
+}
+
+void dequeue()
+{
+  if(front == -1 && rear == -1)
+  {
+    printf("\n\t Queue is already empty ...Underflow");
+  }
+  else if(front == rear)
+  {
+    printf("\n\t %d data is dequeued from %d",queue[front],front);
+    front = -1;
+    rear = -1;
+  }
+  else
+  {
+    printf("\n\t %d data is dequeued from %d",queue[front],front);
+    front++;
+  }
+}
+
+void display()
+{
+  if(front == -1 && rear == -1)
+  {
+    printf("\n\t Queue is empty");
+  }
+  else
+  {
+    int i;
+    i = front;
+    while(i <= rear)
+    {
+      printf("%d\t",queue[i]);
+      i++;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/**
+ * @Author: Aayush Joshi SE4_14
+ * @Date:   2020-08-17T14:54:28+05:30
+ * @Email:  aayush.joshi_19@sakec.ac.in
+ * @Project: Programming
+ * @Filename: binary_search.c
+ * @Last modified by:   Aayush Joshi SE4_14
+ * @Last modified time: 2020-09-16T09:55:35+05:30
+ */
+
+
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int i,n,first,last,middle,search;
+  int array[50];
+  printf("Binary Search Program By:\nAayush Joshi\nSE-4\nRoll No-14\n");
+  printf("Enter number of elements\n");
+  scanf("%d",&n);
+  printf("Enter %d integers\n",n);
+  for(i = 0;i < n;i++)
+  {
+    scanf("%d",&array[i]);
+  }
+  printf("Enter value to find\n");
+  scanf("%d",&search);
+  first = 0;
+  last = n - 1;
+  middle = (first+last)/2;
+  while(first<=last)
+  {
+    if(array[middle]<search)
+    {
+      first = middle + 1;
+    }
+    else if(array[middle] == search)
+    {
+      printf("%d found at location %d.\n",search,middle+1);
+      break;
+    }
+    else
+    {
+      last = middle + 1;
+    }
+    middle = (first+last)/2;
+  }
+  if(first>last)
+  {
+    printf("Not found! %d is not present in the list.\n",search);
+  }
+  getch();
+}

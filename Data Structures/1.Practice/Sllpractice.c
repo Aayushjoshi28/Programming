@@ -27,7 +27,7 @@ void delete_sp();
 void main()
 {
   int ch;
-  while(2)
+  while(1)
   {
     printf("\n\t -----------------------------------Singly Linked List -----------------------------------");
 		printf("\n\t1.Create\t2.Traverse\t3.Print \t4.Count \t5.Search\t6.concate\t7.Insert_beg\t8.Insert_end\t9.Insert_sp\t10.Delete_beg\t11.Delete_end\t12.Delete_sp\t13.exit");

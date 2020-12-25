@@ -12,11 +12,13 @@ void display();
 void main()
 {
   int ch;
-  printf("\n\t----------Queue Using Array Practice-----------")
+  printf("\n\t----------Queue Using Array Practice-----------");
   while(1)
   {
     printf("\n\t1.Enqueue\t2.Dequeue\t3.Display\t4.Exit");
-    switch (ch)
+    printf("\n\tEnter Your Choice:");
+    scanf("%d",&ch);
+    switch(ch)
     {
       case 1: enqueue(); break;
       case 2: dequeue(); break;

@@ -33,6 +33,24 @@ void enqueue()
 {
   int val;
   printf("\n\tEnter the data to enqueue:");
+  scanf("%d",&data);
+  if(front == 0 && rear==max_size - 1)
+  {
+    printf("\n\tQueue is already full......Overflow");
+  }
+  else if(front == -1 && rear == -1)
+  {
+    front = front + 1;
+    rear = rear + 1;
+    queue[rear] = data;
+    printf("\n\t%d data is enqueued at %d",data,rear);
+  }
+  else if(rear < max_size - 1)
+  {
+    rear = rear + 1;
+    queue[rear] = data;
+    printf("\n\t%d data is enqueued at %d",data,rear);
+  }
 }
 
 void dequeue()

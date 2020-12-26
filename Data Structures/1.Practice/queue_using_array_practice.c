@@ -16,7 +16,7 @@ void main()
   while(1)
   {
     printf("\n\t1.Enqueue\t2.Dequeue\t3.Display\t4.Exit");
-    printf("\n\tEnter Your Choice:");
+    printf("\n\n\tEnter Your Choice:");
     scanf("%d",&ch);
     switch(ch)
     {
@@ -31,7 +31,7 @@ void main()
 
 void enqueue()
 {
-  int val;
+  int data;
   printf("\n\tEnter the data to enqueue:");
   scanf("%d",&data);
   if(front == 0 && rear==max_size - 1)
@@ -68,9 +68,9 @@ void display()
   {
     int i;
     i = front;
-    while(i<rear)
+    while(i<=rear)
     {
-      printf("%d\t",queue[i]);
+      printf("\t%d\t",queue[i]);
       i++;
     }
   }

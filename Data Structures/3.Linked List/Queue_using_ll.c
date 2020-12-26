@@ -101,7 +101,7 @@ void display()
 		printf("\n");
 		while(p!=NULL)
 		{
-			printf("\t %d(%u)(n=%u) ",p->data,p,p->next);
+			printf("\t %d(%u)(next=%u) ",p->data,p,p->next);
 			p=p->next;
 		}
 	}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Nptel/Demonstration/Concept Based Programming/Concept Based Programming.iml" filepath="$PROJECT_DIR$/Nptel/Demonstration/Concept Based Programming/Concept Based Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Nptel/Demonstration/Demonstration.iml" filepath="$PROJECT_DIR$/Nptel/Demonstration/Demonstration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Nptel/Exercises/Exercises.iml" filepath="$PROJECT_DIR$/Nptel/Exercises/Exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Experiments/Experiments.iml" filepath="$PROJECT_DIR$/Experiments/Experiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming.iml" filepath="$PROJECT_DIR$/Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projects/Projects.iml" filepath="$PROJECT_DIR$/Projects/Projects.iml" />
+    </modules>
+  </component>
+</project>
